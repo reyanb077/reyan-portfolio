@@ -1,4 +1,5 @@
-/* RESET AND VARIABLES */
+
+    /* RESET AND VARIABLES */
 
 * {
     margin: 0;
@@ -566,3 +567,57 @@ footer {
     }
 
 }
+
+/* PRINT STYLES: cleaner portfolio print / Save as PDF */
+@media print {
+    @page { size: A4; margin: 16mm; }
+    html { scroll-behavior: auto; }
+    body {
+        background: #ffffff;
+        color: #111111;
+        font-size: 10pt;
+        line-height: 1.45;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    header, .hero-buttons, .social-links, footer {
+        display: none !important;
+    }
+    .hero, .section, .contact-section {
+        min-height: 0;
+        padding: 18mm 0;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+    .hero {
+        display: block;
+        background: #ffffff;
+        color: #111111;
+    }
+    .hero-description, .about-text p, .education-card p,
+    .work-card p, .project-card p, .contact-section > p:not(.section-tag) {
+        color: #333333;
+    }
+    .hero-card, .about-highlight, .education-card, .work-card,
+    .project-card, .skill-category, .interest-list span {
+        box-shadow: none !important;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+    .hero-card, .about-highlight, .contact-section {
+        background: #f2f2f2;
+        color: #111111;
+        border: 1px solid #cccccc;
+    }
+    .hero-card p, .about-highlight p { color: #333333; }
+    .section-heading, h1, h2, h3 {
+        break-after: avoid;
+        page-break-after: avoid;
+    }
+    a { color: #111111; text-decoration: underline; }
+}
+
+    margin-bottom: 20px;
+}
+
+.work-car
